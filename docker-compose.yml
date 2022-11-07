@@ -41,7 +41,7 @@ services:
     restart: unless-stopped
     volumes:
       - wordpress:$VOLUME_WORDPRESS
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/
     networks:
       - app-network
   
