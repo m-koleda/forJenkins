@@ -9,3 +9,7 @@
 4. Создаем item в Jenkins, который объединяет предыдущие два пункта: по коммиту в Github Jenkins должен делать pull проекта из Github + 
 создаем docker-compose.yml, в котором описаны сборки контейнеров с БД (Mysql), вебсервером (Nginx), Wordpress, запуск контейнеров.
 5. Тестируем: изменяем index.html, делаем коммит и проверяем изменения сайта Wordpress.
+
+Итог:
+![image](https://user-images.githubusercontent.com/97964258/200326883-43f369ea-ad79-4ef8-8298-5c3ad1959455.png)
+![image](https://user-images.githubusercontent.com/97964258/200327135-9a7216e6-1628-49fc-a110-635e417ffdfe.png)
