@@ -10,3 +10,4 @@ RUN dotnet build
 WORKDIR /app/Core.Application/
 
 ENTRYPOINT ["dotnet", "run", "Core.Application.dll"]
+
