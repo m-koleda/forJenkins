@@ -40,9 +40,8 @@ services:
       - "8000:80"
     restart: unless-stopped
     volumes:
-      - wordpress:/var/www/html
+      - wordpress:$VOLUME_WORDPRESS
       - ./nginx:/etc/nginx/conf.d
-#      - ./app:/usr/share/nginx/html
     networks:
       - app-network
   
