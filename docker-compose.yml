@@ -38,7 +38,7 @@ services:
     container_name: webserver
     ports:
       - 80:80
-#    restart: unless-stopped
+    restart: unless-stopped
     volumes:
       - wordpress:$VOLUME_WORDPRESS
       - ./nginx:/etc/nginx/conf.d
