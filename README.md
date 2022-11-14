@@ -5,7 +5,16 @@
 План реализации:
 1. Создание проекта на Git/Github.
 2. Устанавливаем и настраиваем Jenkins на связь с Github и node (slave), чтобы по коммиту в Github Jenkins делал pull проекта из Github на node.
-3. Устанавливаем Docker и интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.
+3. Устанавливаем Java, Docker, Docker-compose, Git на node: 
+sudo apt update
+sudo apt install openjdk-11-jre -y
+java -version
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+sudo apt install git
+затем интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.
+
 4. Создаем item в Jenkins, который объединяет предыдущие два пункта: по коммиту в Github Jenkins должен делать pull проекта из Github + 
 создаем docker-compose.yml, в котором описаны сборки контейнеров с БД (Mysql), вебсервером (Nginx), Wordpress, запуск контейнеров.
 5. Тестируем: изменяем index.html, делаем коммит и проверяем изменения сайта Wordpress.
