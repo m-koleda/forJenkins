@@ -12,9 +12,9 @@ java -version<br/>
 curl -fsSL https://get.docker.com -o get-docker.sh<br/>
 sudo sh get-docker.sh<br/>
 sudo usermod -aG docker $USER<br/>
-sudo apt install git<br/>
-
-затем интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.
+>sudo apt install git<br/>
+>
+затем интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.<br/>
 
 4. Создаем item в Jenkins, который объединяет предыдущие два пункта: по коммиту в Github Jenkins должен делать pull проекта из Github + 
 создаем docker-compose.yml, в котором описаны сборки контейнеров с БД (Mysql), вебсервером (Nginx), Wordpress, запуск контейнеров.
