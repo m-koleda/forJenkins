@@ -7,14 +7,14 @@
 2. Устанавливаем и настраиваем Jenkins на связь с Github и node (slave), чтобы по коммиту в Github Jenkins делал pull проекта из Github на node.
 3. Устанавливаем Java, Docker, Docker-compose, Git на node:<br/>
 >sudo apt update<br/>
-sudo apt install openjdk-11-jre -y<br/>
-java -version<br/>
-curl -fsSL https://get.docker.com -o get-docker.sh<br/>
-sudo sh get-docker.sh<br/>
-sudo usermod -aG docker $USER<br/>
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
+>sudo apt install openjdk-11-jre -y<br/>
+>java -version<br/>
+>curl -fsSL https://get.docker.com -o get-docker.sh<br/>
+>sudo sh get-docker.sh<br/>
+>sudo usermod -aG docker $USER<br/>
+>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose<br/>
+>sudo chmod +x /usr/local/bin/docker-compose<br/>
+>docker-compose --version<br/>
 >sudo apt install git<br/>
 >
 затем интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.<br/>
