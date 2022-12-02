@@ -18,6 +18,12 @@
 >sudo apt install git<br/>
 >
 затем интегрируем с Jenkins, проводим тест по разворачиванию контейнера на node из Jenkins.<br/>
+>sudo -i<br/>
+>\# ssh-keygen -f ~/.ssh/jekins_agent_key<br/>
+>\# cat ~/.ssh/jekins_agent_key.pub > ~/.ssh/authorized_keys<br/>
+>\# cat ~/.ssh/jekins_agent_key<br/>
+>
+вывод команды копируем в jenkins credentials ssh-key
 
 4. Создаем item в Jenkins, который объединяет предыдущие два пункта: по коммиту в Github Jenkins должен делать pull проекта из Github + 
 создаем docker-compose.yml, в котором описаны сборки контейнеров с БД (Mysql), вебсервером (Nginx), Wordpress, запуск контейнеров.
